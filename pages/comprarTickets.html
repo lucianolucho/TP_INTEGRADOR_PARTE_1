@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/comprarTicket.css">
+  <style>
+
+  </style>
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <header>
+    <!-- INICIO  de navbar -->
+
+    <!-- considerar usar d-flex y justify-content-center  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid row float-right ">
+
+        <div class="col-5">
+          <a class="navbar-brand" href="#">
+            <img src="../img/codoacodo.png" alt="coco a codo" width="150" height="90"
+              class="d-inline-block align-items-xl-center">
+            Conf Bs As
+          </a>
+        </div>
+        <div class="col-7 ">
+
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#">La conferencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Los oradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">El Lugar y la fecha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Conviértete en orador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menuVerde" href="#">Comprar tickes</a>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- FIN  de navbar -->
+  </header>
+
+  <div class="  container">
+  <div class="d-flex justify-content-center "> 
+            <div class=" ">
+                <div class="card tarjeta nam" id="tarjeta_1"  onclick="actualizarCombo(1)" >
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Estudiante</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <p class="card-text">80%</p>
+                        <p class="card-text"><small class="text-muted">* Presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="card tarjeta" id="tarjeta_2"  onclick="actualizarCombo(2)">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Trainee</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <p class="card-text">50%</p>
+                        <p class="card-text"><small class="text-muted">* Presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card tarjeta" id="tarjeta_3"  onclick="actualizarCombo(3)">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Junior</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <p class="card-text">15%</p>
+                        <p class="card-text"><small class="text-muted">* Presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenedorVenta">
+        VENTA
+
+    </div>
+
+
+    <div id="contenedorValorVenta">
+        VALOR DE TICKET $<span id="ticket"></span>
+    </div>
+
+
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Apellido" name="apellido" id="apellido">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Correo" name="email" id="email">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Cantidad
+            </div>
+            <div class="col">
+                Categoria
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="cantidad" name="cantidad" id="cantidad">
+            </div>
+            <div class="col">
+                <div id="comboCategoria">
+                    <select class="form-select" aria-label="Default select example" id="categoriaId" onselect="/*asignarDescuentoId()*/">
+                    <option selected>Seleccione la categoria</option>
+                    <option value="1">Estudiante</option>
+                    <option value="2">Trainee</option>
+                    <option value="3">Junior</option>
+                </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="contenedorCosto">
+            <p>
+                Total a pagar: $ <span id="resultadoId"> </span>
+            </p>
+
+        </div>
+
+        <div class="row ">
+            <div class="col">
+                <button type="submit" class="btn boton" id="borrarId"   onclick="/*borrarCampos();*/">Borrar</button>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn  boton" id="resumenId" onclick="/*calcularTickets();*/"  >Resumen</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+  <!-- Inicio de   carrousel -->
+
+
+
+  <!-- FIN  de  carrousel -->
+
+  <!-- Inicio de seccion de tarjetas  -->
+
+  
+  <!-- FIN  de seccion de tarjetas  -->
+
+  <!-- Inicio de  IMAGEN A IZQUIERDA  Y TEXTO A DeRECHA -->
+
+  
+
+  <!-- FIN  de  IMAGEN A IZQUIERDA  Y TEXTO A DeRECHA-->
+
+  <!-- Inicio de Formulario-->
+
+  
+  <!-- FIN  de  Formulario -->
+
+
+
+  <!-- Inicio de Footer  -->
+
+  <footer>
+
+    <div class=" wrapFooter ">
+      <ul class="list-unstyled d-flex ">
+        <li >
+          <a class="active  wrapContenidoFooter" aria-current="page" href="#">Preguntas <br> frecuentes</a>
+        </li>
+        <li>
+          <a class="wrapContenidoFooter" href="#">Contáctanos</a>
+        </li>
+        <li >
+          <a class="wrapContenidoFooter"href="#">Prensa</a>
+        </li>
+        <li >
+          <a class="wrapContenidoFooter"href="#">Conferencias</a>
+        </li>
+        <li >
+          <a class="wrapContenidoFooter"  href="#">Términos y <br> condiciones</a>
+        </li>
+        <li >
+          <a class="wrapContenidoFooter"  href="#">Privacidad</a>
+        </li>
+        <li >
+          <a class="wrapContenidoFooter"   href="#">Estudiantes</a>
+        </li>
+
+        <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Preguntas <br> frecuentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contáctanos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Prensa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Conferencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Términos y <br> condiciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Privacidad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Estudiantes</a>
+              </li> -->
+      </ul>
+      <div>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+  <!-- FIN  de Footer -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+    <script src="../js/comprarTicket.js"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+
+</body>
+
+</html>

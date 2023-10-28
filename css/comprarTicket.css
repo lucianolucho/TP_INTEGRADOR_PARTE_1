@@ -1,0 +1,130 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ /* INICION VAVBAR */
+ #verde {
+    color: green;
+}
+
+
+.margenHeader {
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.container-fluid {
+    margin-left: 50px;
+    margin-right: 60px;
+}
+
+/* FIN NAVBAR  */ 
+
+.cardrrr {
+    width: 330px;
+    height: 430;
+}
+/*
+* {
+    margin-top: 1%;
+}**/
+
+.container {
+    margin-top: 3%;
+}
+.tarjeta{
+    width: 300px;
+    margin-left:20px ;
+    margin-right:20px ;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    }
+
+#tarjeta_1 {
+    border-color: blue;
+}
+
+#tarjeta_2 {
+    border-color: green;
+}
+
+#tarjeta_3 {
+    border-color: rgb(240, 198, 12);
+}
+
+.card-body {
+    text-align: center;
+}
+
+#contenedorVenta {
+    margin-top: 1%;
+    text-align: center;
+    font-size: medium;
+
+}
+
+#contenedorValorVenta {
+    margin-top: 1%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contenedorFormulario {
+    margin-top: 1%;
+}
+
+.contenedorApellidoNombre {
+    display: flex;
+    justify-content: space-around;
+}
+
+#idCorreo {
+    margin-top: 1%;
+}
+
+.row>.col {
+    margin-top: 1%;
+}
+
+#contenedorCosto {
+
+
+    background-color: aqua;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5em;
+    margin-top: 25px;
+
+}
+
+.boton {
+    background-color: yellowgreen;
+    width: 100%;
+}
+
+
+.wrapFooter {
+    margin-top: 20px;
+    background-image: linear-gradient(to right, rgb(21, 46, 64), rgb(63, 99, 149));
+    color: white;
+    height: 5em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.wrapContenidoFooter {
+    display: inline-block;
+    align-items: flex-end;
+    /* 10px arriba, 3px derecha, 30px abajo, 5px izquierda */
+    margin: 10px 60px 10px 60px;
+
+    font-size: large;
+    align-items: center;
+    vertical-align: middle;
+}
