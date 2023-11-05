@@ -155,7 +155,10 @@
   border: 1px solid white;
 }
 
-
+#contenedorTextoplaya_2{
+  background-color: grey;
+  color: white;
+}
 
 /**********************************/
 #contenedorPrincipal {
@@ -289,4 +292,11 @@
   vertical-align: middle;
 
   text-decoration: none;
+}
+
+footer{
+  margin-top: 3em;
+  min-height: 5em;
+  /*background-color: #404449;*/
+  background-image: linear-gradient(rgb(33, 72, 89),rgb(11, 69, 88));
 }
